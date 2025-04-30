@@ -1,0 +1,35 @@
+<!-- <! -->
+
+// namespace App\Http\Livewire; // Ganti ke namespace yang benar
+
+// use App\Models\Fakultas; // Pastikan menggunakan model yang benar (huruf kapital F)
+// use Livewire\Component;
+// use App\Models\RunningText; -->
+
+// class Beranda extends Component
+// {
+// public $texts;
+// public $fakultas;
+
+// // Memuat data fakultas
+// public function loadFakultas()
+// {
+// $this->fakultas = Fakultas::all();
+// }
+
+// Method mount untuk inisialisasi data
+// public function mount()
+// {
+// $this->texts = RunningText::all(); // Mengambil data RunningText
+// $this->loadFakultas(); // Memuat data fakultas
+// }
+
+// Menampilkan data ke view
+// public function render()
+// {
+// return view('livewire.beranda', [
+// 'texts' => $this->texts, // Mengirimkan data texts
+// 'fakultas' => $this->fakultas, // Mengirimkan data fakultas ke view
+// ]);
+// }
+// }
