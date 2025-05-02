@@ -2,11 +2,13 @@
 
 use App\Http\Controllers\ProfileController;
 
+use App\Http\Livewire\TentangKami;
 use App\Livewire\Fakultas\DetailFakultas;
 use App\Models\jurusan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Beranda;
 use App\Livewire\Fakultas;
+use App\Livewire\Kontak;
 use Illuminate\Support\Facades\Auth;
 
 // Halaman default (Welcome page)
@@ -23,7 +25,8 @@ Route::get('/',Beranda::class)->name('beranda');
 // })->middleware('auth');
 Route::get('/fakultas', fakultas::class)->name('fakultas');
 Route::get('/fakultas/{slug}', DetailFakultas::class)->name('jurusan');
-
+Route::get('/tentang-kami', TentangKami::class)->name('tentangkami');
+Route::get('/kontak', Kontak::class)->name('kontak');
 
 // Grup route untuk profile yang hanya bisa diakses oleh user yang sudah login
 // Route::middleware('auth')->group(function () {

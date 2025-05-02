@@ -27,7 +27,7 @@
                     $menus = [
                         ['name' => 'Beranda', 'url' => '/'],
                         ['name' => 'Fakultas', 'url' => '/fakultas'],
-                        ['name' => 'tentang kami', 'url' => '/tentang kami'],
+                        ['name' => 'tentang kami', 'url' => '/tentang-kami'],
                          ['name' => 'kontak', 'url' => '/kontak'],
                     ];
                 @endphp
@@ -67,6 +67,5 @@
                 {{ $menu['name'] }}
             </a>
         @endforeach
-        <a href="{{ url('/kontak') }}" class="block uppercase hover:text-yellow-300 py-2 border-b border-white">Kontak</a>
     </div>
 </div>

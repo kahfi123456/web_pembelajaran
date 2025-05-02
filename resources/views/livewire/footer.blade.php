@@ -21,9 +21,6 @@
                 <ul class="space-y-2 text-sm text-gray-200">
                     <li><a href="{{ url('/') }}" class="hover:text-yellow-300 transition">Beranda</a></li>
                     <li><a href="{{ url('/fakultas') }}" class="hover:text-yellow-300 transition">Fakultas</a></li>
-                    <li><a href="{{ url('/materi') }}" class="hover:text-yellow-300 transition">Materi</a></li>
-                    <li><a href="{{ url('/search') }}" class="hover:text-yellow-300 transition">Pencarian</a></li>
-                    <li><a href="{{ url('/admin') }}" class="hover:text-yellow-300 transition">Admin</a></li>
                     <li><a href="{{ url('/kontak') }}" class="hover:text-yellow-300 transition">Kontak</a></li>
                 </ul>
             </div>
