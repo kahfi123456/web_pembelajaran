@@ -8,31 +8,14 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-       <a href="#"
-   class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-100 hover:border-blue-400 hover:bg-blue-50 flex flex-col items-center justify-center">
+       @foreach ($fakultas as $item)
+        <a href="{{ route('jurusan', ['slug' => $item->slug]) }}" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-100 hover:border-blue-400 hover:bg-blue-50 flex flex-col items-center justify-center">
             <div class="text-center mb-4">
             <span class="text-4xl mb-2">🛠️</span>
-            <h4 class="text-xl font-semibold text-gray-800">Fakultas Teknik</h4>
+            <h4 class="text-xl font-semibold text-gray-800">{{ $item->title }}</h4>
             </div>
             <p class="text-sm text-gray-500">Klik untuk melihat daftar jurusan</p>
         </a>
-       
-       <a href="#"
-   class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-100 hover:border-blue-400 hover:bg-blue-50 flex flex-col items-center justify-center">
-            <div class="text-center mb-4">
-            <span class="text-4xl mb-2">💼</span>
-            <h4 class="text-xl font-semibold text-gray-800">Fakultas Ekonomi</h4>
-            </div>
-            <p class="text-sm text-gray-500">Klik untuk melihat daftar jurusan</p>
-        </a>
-      
-       <a href="#"
-   class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-100 hover:border-blue-400 hover:bg-blue-50 flex flex-col items-center justify-center">
-            <div class="text-center mb-4">
-            <span class="text-4xl mb-2">📚</span>
-            <h4 class="text-xl font-semibold text-gray-800">FHISIP</h4>
-            </div>
-            <p class="text-sm text-gray-500">Klik untuk melihat daftar jurusan</p>
-        </a>
+       @endforeach
     </div>
 </div>
