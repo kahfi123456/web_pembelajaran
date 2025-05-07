@@ -22,6 +22,7 @@
                     <li><a href="{{ url('/') }}" class="hover:text-yellow-300 transition">Beranda</a></li>
                     <li><a href="{{ url('/fakultas') }}" class="hover:text-yellow-300 transition">Fakultas</a></li>
                     <li><a href="{{ url('/kontak') }}" class="hover:text-yellow-300 transition">Kontak</a></li>
+                    <li><a href="{{ url('/tentang-kami') }}" class="hover:text-yellow-300 transition">Tentangkami</a></li>
                 </ul>
             </div>
 
