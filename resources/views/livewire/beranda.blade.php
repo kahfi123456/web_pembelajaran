@@ -21,7 +21,7 @@
                 Selamat Datang di <br>Materi <span class="text-yellow-400">Pengayaan Universitas Terbuka</span>
             </h1>
             <p class="text-lg sm:text-xl font-light mb-6">
-                Akses materi pembelajaran berdasarkan fakultas dan jurusan Anda dengan mudah dan cepat.
+                Akses materi pembelajaran yang kamu inginkan dengan mudah dan cepat.
             </p>
             <a href="{{ url('/fakultas') }}"
                class="inline-block bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-500 hover:scale-105 transition duration-300">
@@ -35,7 +35,7 @@
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">📖 Apa Itu Materi Pengayaan?</h2>
             <p class="text-gray-600 text-lg leading-relaxed">
-                Materi Pengayaan UT adalah kumpulan sumber belajar tambahan yang dirancang untuk membantu mahasiswa memahami mata kuliah secara lebih mendalam. 
+                Materi Pengayaan UT adalah kumpulan sumber belajar tambahan yang dirancang untuk membantu mahasiswa/mahasiswi memahami mata kuliah secara lebih mendalam. 
                 Anda dapat menjelajahi materi berdasarkan fakultas dan jurusan untuk menemukan file yang relevan.
             </p>
         </div>
