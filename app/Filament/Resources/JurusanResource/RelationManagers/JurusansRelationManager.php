@@ -21,7 +21,19 @@ class JurusansRelationManager extends RelationManager
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
+                    Forms\Components\Repeater::make('materi')
+                        ->columnSpanFull()
+                        ->relationship()
+                        ->schema([
+                            Forms\Components\TextInput::make('buku_title')
+                            ->required(),
+                            Forms\Components\FileUpload::make('buku_pdf')
+                            ->required()
+                            ->directory('buku_materi'),
+                        ]),
             ]);
+
+        
     }
 
     public function table(Table $table): Table

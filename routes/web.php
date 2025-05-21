@@ -6,6 +6,7 @@ use App\Http\Livewire\TentangKami;
 use App\Livewire\Auth\Mahasiswalogin;
 use App\Livewire\Auth\Mahasiswaregister;
 use App\Livewire\Fakultas\DetailFakultas;
+use App\Livewire\Jurusan\MateriJurusan;
 use App\Models\jurusan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Beranda;
@@ -19,6 +20,9 @@ use Illuminate\Support\Facades\Auth;
 // });
 Route::get('/mahasiswaregister', Mahasiswaregister::class)->name('mahasiswaregister');
 Route::get('/mahasiswalogin', Mahasiswalogin::class)->name('mahasiswalogin');
+// Route::get('/jurusan/{id}/materi', MateriJurusan::class)->name('materi.jurusan');
+Route::get('/jurusan/{id}/materi', MateriJurusan::class)->name('jurusan.materi');
+
 
 // Route::middleware(['auth'])->group(function () {
 //     // Route::get('/', function(){

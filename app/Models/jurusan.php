@@ -13,4 +13,8 @@ class jurusan extends Model
     {
         return $this->belongsTo(fakultas::class);
     }
+    public function materi()
+    {
+        return $this->hasMany(materi::class);
+    }
 }

@@ -25,11 +25,14 @@
         <!-- Grid Daftar Jurusan -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             @foreach ($fakultas->jurusans as $item)
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 p-6 border border-blue-100 hover:border-blue-500">
-                    <h2 class="text-xl font-semibold text-blue-800 mb-2">{{ $item->title }}</h2>
-                    <p class="text-gray-600 text-sm">Jurusan ini merupakan bagian dari Fakultas {{ $fakultas->title }}.</p>
-                </div>
+                <a href="{{ url('/jurusan/' . $item->id . '/materi') }}">
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 p-6 border border-blue-100 hover:border-blue-500">
+                        <h2 class="text-xl font-semibold text-blue-800 mb-2">{{ $item->title }}</h2>
+                        <p class="text-gray-600 text-sm">Jurusan ini merupakan bagian dari Fakultas {{ $fakultas->title }}.</p>
+                    </div>
+                </a>
             @endforeach
+        
         </div>
     </div>
 </div>

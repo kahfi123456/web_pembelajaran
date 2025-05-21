@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('materis', function (Blueprint $table) {
             $table->id('id')->primary();
+            $table->foreignId('jurusan_id')->constrained('jurusans')->onDelete('cascade');
             $table->integer('order')->default(0);
             $table->boolean('is_active')->default(1);
-            $table->string('buku',1000);
-            $table->string('deskripsi',1000);
+            $table->string('buku_title',1000);
+            $table->string('buku_pdf',);
             $table->timestamps();
         });
     }

@@ -9,9 +9,14 @@ class materi extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'jurusan_id',
         'order',
         'is_active',
-        'buku',
-        'deskripsi',
+        'buku_title',
+        'buku_pdf',
     ];
+    public function jurusan()
+    {
+        return $this->belongsTo(jurusan::class);
+    }
 }
