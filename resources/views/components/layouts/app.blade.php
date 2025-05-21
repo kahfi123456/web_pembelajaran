@@ -9,7 +9,8 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    @if (!request()->routeIs('filament.admin.auth.login'))
+    @livewireScripts()
+    @if (!request()->routeIs('filament.admin.auth.login')&& !request()->routeIs('mahasiswalogin') && !request()->routeIs('mahasiswaregister'))
         @livewire('navbar')
     @endif
 
@@ -17,7 +18,7 @@
         {{ $slot }}
     </main>
 
-    @if (!request()->routeIs('filament.admin.auth.login'))
+    @if (!request()->routeIs('filament.admin.auth.login')&& !request()->routeIs('mahasiswalogin') && !request()->routeIs('mahasiswaregister'))
         @livewire('footer')
     @endif
     

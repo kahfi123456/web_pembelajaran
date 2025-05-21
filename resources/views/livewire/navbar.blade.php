@@ -1,7 +1,7 @@
 <body class="pt-[72px]">
 <div class="static" x-data="{ open: false }">
     {{-- Navbar --}}
-    <div class="fixed top-0 z-50 w-full h-[72px] bg-[#005BAC] justify-center shadow-lg flex">
+    <div class="fixed top-0 z-50 w-full h-[72px] bg-gradient-to-r from-[#b5bda4] to-[#33319d] justify-center shadow-lg flex">
         <div class="flex justify-between items-center w-[90%] h-full text-white">
             {{-- Logo --}}
             <div class="flex items-center gap-4 z-10">
@@ -41,7 +41,7 @@
             </nav>
             {{-- Login Desktop --}}
             <div class="hidden md:flex items-center gap-6">
-                <a href="{{ url('login') }}"
+                <a href="{{ url('mahasiswalogin') }}"
                    class="uppercase font-[poppins] text-sm font-medium hover:text-yellow-300 transition-all duration-300 ease-in-out">
                     Login
                 </a>
