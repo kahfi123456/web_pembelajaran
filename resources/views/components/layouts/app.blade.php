@@ -10,7 +10,7 @@
 </head>
 <body>
     @livewireScripts()
-    @if (!request()->routeIs('filament.admin.auth.login')&& !request()->routeIs('mahasiswalogin') && !request()->routeIs('mahasiswaregister'))
+    @if (!request()->routeIs('filament.admin.auth.login')&& !request()->routeIs('mahasiswalogin') && !request()->routeIs('mahasiswaregister') && !request()->routeIs('forgotpassword'))
         @livewire('navbar')
     @endif
 
@@ -18,7 +18,7 @@
         {{ $slot }}
     </main>
 
-    @if (!request()->routeIs('filament.admin.auth.login')&& !request()->routeIs('mahasiswalogin') && !request()->routeIs('mahasiswaregister'))
+    @if (!request()->routeIs('filament.admin.auth.login')&& !request()->routeIs('mahasiswalogin') && !request()->routeIs('mahasiswaregister')&& !request()->routeIs('forgotpassword'))
         @livewire('footer')
     @endif
     

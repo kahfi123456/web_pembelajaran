@@ -44,7 +44,7 @@
             </div>
         @endif
 
-        <form wire:submit.prevent="login" class="space-y-5">
+        <form wire:submit.prevent="requestReset" class="space-y-5">
             <div>
                 <label class="block text-sm font-medium text-white mb-1">Email</label>
                 <input type="email" wire:model.defer="email"
@@ -52,28 +52,19 @@
                     required>
                 @error('email') <span class="text-red-300 text-sm">{{ $message }}</span> @enderror
             </div>
-
             <div>
-                <label class="block text-sm font-medium text-white mb-1">Password</label>
-                <input type="password" wire:model.defer="password"
-                    class="w-full bg-white/30 text-white placeholder-white/70 border border-white/30 focus:ring-white focus:border-white px-4 py-2 rounded-lg shadow-sm backdrop-blur-md"
-                    required>
-                @error('password') <span class="text-red-300 text-sm">{{ $message }}</span> @enderror
+                <label class="block text-sm font-medium text-white mb-1">Nomor Induk Mahasiswa</label>
+                <input type="nim" wire:model.defer="nim" wire:model.lazy="nim"
+                    class="w-full bg-white/30 text-white placeholder-white/70 border border-white/30 focus:ring-white focus:border-white px-4 py-2 rounded-lg shadow-sm backdrop-blur-md" placeholder="Masukan nim Sesuai KTP Anda" />
+                @error('nim') <span class="text-red-300 text-sm">{{ $message }}</span> @enderror
             </div>
-
             <button type="submit"
                 class="w-full bg-white/20 text-white py-2 rounded-lg hover:bg-white/30 transition duration-200 font-semibold">
-                Login
+                Kirim Permohonan
             </button>
-
             <div class="text-center mt-4">
-                <a href="{{ route('mahasiswaregister') }}" class="text-sm text-white hover:underline">
-                    Belum punya akun? Daftar
-                </a>
-            </div>
-            <div class="text-center mt-4">
-                <a href="{{ route('forgotpassword') }}" class="text-sm text-white hover:underline">
-                    forgot-password
+                <a href="{{ route('mahasiswalogin') }}" class="text-sm text-white hover:underline">
+                    Kembali Ke Login
                 </a>
             </div>
         </form>

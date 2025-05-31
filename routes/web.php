@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 
 use App\Http\Livewire\TentangKami;
+use App\Livewire\Auth\ForgotPassword;
 use App\Livewire\Auth\Mahasiswalogin;
 use App\Livewire\Auth\Mahasiswaregister;
 use App\Livewire\Fakultas\DetailFakultas;
@@ -20,6 +21,7 @@ use Illuminate\Support\Facades\Auth;
 // });
 Route::get('/mahasiswaregister', Mahasiswaregister::class)->name('mahasiswaregister');
 Route::get('/mahasiswalogin', Mahasiswalogin::class)->name('mahasiswalogin');
+Route::get('/forgotpassword', ForgotPassword::class)->name('forgotpassword');
 // Route::get('/jurusan/{id}/materi', MateriJurusan::class)->name('materi.jurusan');
 Route::get('/jurusan/{id}/materi', MateriJurusan::class)->name('jurusan.materi');
 
