@@ -4,6 +4,7 @@ namespace App\Providers\Filament;
 
 use App\Filament\Resources\FakultasResource;
 use App\Filament\Resources\MateripembelajaranResource;
+use App\Filament\Resources\PasswordResetRequestResource;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -72,6 +73,10 @@ class AdminPanelProvider extends PanelProvider
                             ->icon('heroicon-s-information-circle')
                             ->isActiveWhen(fn(): bool => request()->routeIs('filament.admin.resources.RunningTextBeranda.index'))
                             ->url(MateripembelajaranResource::getUrl()),
+                        NavigationItem::make('Reset')
+                            ->icon('heroicon-s-information-circle')
+                            ->isActiveWhen(fn(): bool => request()->routeIs('filament.admin.password-reset-request.index'))
+                            ->url(PasswordResetRequestResource::getUrl()),
                     ]),
                     NavigationGroup::make('Fakultas')
                     ->items([

@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('password_reset_requests', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('mahasiswa_id')->constrained('mahasiswas')->onDelete('cascade');
+            $table->string('status')->default('pending'); 
+            $table->string('token')->nullable();
+            $table->timestamp('expires_at')->nullable(); 
             $table->timestamps();
         });
     }
