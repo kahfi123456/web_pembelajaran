@@ -30,7 +30,7 @@
             <img src="{{ asset('images/z.png') }}" class="w-16 h-16 md:w-20 md:h-20" />
         </div>
         
-        <h2 class="text-2xl font-bold text-white mb-6 text-center drop-shadow">forgot password</h2>
+        <h2 class="text-2xl font-bold text-white mb-6 text-center drop-shadow">Lupa Password</h2>
 
         @if (session()->has('success'))
             <div class="mb-4 text-green-200 bg-green-500/20 border border-green-300 px-4 py-2 rounded text-sm">
@@ -54,8 +54,9 @@
             </div>
             <div>
                 <label class="block text-sm font-medium text-white mb-1">Nomor Induk Mahasiswa</label>
-                <input type="nim" wire:model.defer="nim" wire:model.lazy="nim"
-                    class="w-full bg-white/30 text-white placeholder-white/70 border border-white/30 focus:ring-white focus:border-white px-4 py-2 rounded-lg shadow-sm backdrop-blur-md" placeholder="Masukan nim Sesuai KTP Anda" />
+                <input type="text" wire:model.defer="nim"
+                    class="w-full bg-white/30 text-white placeholder-white/70 border border-white/30 focus:ring-white focus:border-white px-4 py-2 rounded-lg shadow-sm backdrop-blur-md" 
+                    placeholder="Masukkan NIM Sesuai KTP Anda" />
                 @error('nim') <span class="text-red-300 text-sm">{{ $message }}</span> @enderror
             </div>
             <button type="submit"
