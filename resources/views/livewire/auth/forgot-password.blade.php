@@ -30,7 +30,7 @@
             <img src="{{ asset('images/z.png') }}" class="w-16 h-16 md:w-20 md:h-20" />
         </div>
         
-        <h2 class="text-2xl font-bold text-white mb-6 text-center drop-shadow">Login</h2>
+        <h2 class="text-2xl font-bold text-white mb-6 text-center drop-shadow">forgot password</h2>
 
         @if (session()->has('success'))
             <div class="mb-4 text-green-200 bg-green-500/20 border border-green-300 px-4 py-2 rounded text-sm">
