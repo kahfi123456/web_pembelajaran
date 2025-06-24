@@ -41,11 +41,24 @@
             </nav>
             {{-- Login Desktop --}}
             <div class="hidden md:flex items-center gap-6">
-                <a href="{{ url('mahasiswalogin') }}"
-                   class="uppercase font-[poppins] text-sm font-medium hover:text-yellow-300 transition-all duration-300 ease-in-out">
-                    Login
-                </a>
+                @if(Auth::guard('mahasiswa')->check())
+                    <!-- Jika sudah login sebagai mahasiswa -->
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit"
+                                class="uppercase font-[poppins] text-sm font-medium hover:text-yellow-300 transition-all duration-300 ease-in-out">
+                            Logout
+                        </button>
+                    </form>
+                @else
+                    <!-- Jika belum login -->
+                    <a href="{{ url('mahasiswalogin') }}"
+                       class="uppercase font-[poppins] text-sm font-medium hover:text-yellow-300 transition-all duration-300 ease-in-out">
+                        Login
+                    </a>
+                @endif
             </div>
+            
         </div>
     </div>
     {{-- Mobile Menu (dropdown) --}}

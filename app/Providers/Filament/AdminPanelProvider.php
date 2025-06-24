@@ -5,6 +5,7 @@ namespace App\Providers\Filament;
 use App\Filament\Resources\FakultasResource;
 use App\Filament\Resources\MateripembelajaranResource;
 use App\Filament\Resources\PasswordResetRequestResource;
+use App\Filament\Resources\SuratpengajuanResource;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -34,7 +35,9 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandName('Admin')
             ->colors([
+            
                 'primary' => Color::Amber,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
@@ -69,14 +72,14 @@ class AdminPanelProvider extends PanelProvider
                         ]),
                     NavigationGroup::make('Beranda')
                     ->items([
-                        NavigationItem::make('materi')
-                            ->icon('heroicon-s-information-circle')
-                            ->isActiveWhen(fn(): bool => request()->routeIs('filament.admin.resources.RunningTextBeranda.index'))
-                            ->url(MateripembelajaranResource::getUrl()),
                         NavigationItem::make('Reset')
                             ->icon('heroicon-s-information-circle')
                             ->isActiveWhen(fn(): bool => request()->routeIs('filament.admin.password-reset-request.index'))
                             ->url(PasswordResetRequestResource::getUrl()),
+                        NavigationItem::make('Laporan Pengajuan')
+                            ->icon('heroicon-s-information-circle')
+                            ->isActiveWhen(fn(): bool => request()->routeIs('filament.admin.suratpengajuan.index'))
+                            ->url(SuratpengajuanResource::getUrl()),
                     ]),
                     NavigationGroup::make('Fakultas')
                     ->items([

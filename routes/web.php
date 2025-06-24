@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Beranda;
 use App\Livewire\Fakultas;
 use App\Livewire\Kontak;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 // Halaman default (Welcome page)
@@ -25,7 +26,12 @@ Route::get('/mahasiswalogin', Mahasiswalogin::class)->name('mahasiswalogin');
 Route::get('/forgotpassword', ForgotPassword::class)->name('forgotpassword');
 Route::get('/reset-password/{token}', ResetPassword::class)->name('reset.password');
 Route::get('/jurusan/{id}/materi', MateriJurusan::class)->name('jurusan.materi');
-
+Route::post('/logout', function (Request $request) {
+    auth::guard('mahasiswa')->logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/mahasiswalogin');
+})->name('logout');
 
 // Route::middleware(['auth'])->group(function () {
 //     // Route::get('/', function(){

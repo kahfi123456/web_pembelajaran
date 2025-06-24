@@ -56,7 +56,7 @@
                 <label class="block text-sm font-medium text-white mb-1">Nomor Induk Mahasiswa</label>
                 <input type="text" wire:model.defer="nim"
                     class="w-full bg-white/30 text-white placeholder-white/70 border border-white/30 focus:ring-white focus:border-white px-4 py-2 rounded-lg shadow-sm backdrop-blur-md" 
-                    placeholder="Masukkan NIM Sesuai KTP Anda" />
+                    placeholder="Masukkan NIM  Anda" />
                 @error('nim') <span class="text-red-300 text-sm">{{ $message }}</span> @enderror
             </div>
             <button type="submit"
