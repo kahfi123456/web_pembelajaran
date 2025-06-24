@@ -20,4 +20,4 @@
 <p style="margin-top: 30px;">Demikian informasi yang dapat kami sampaikan. Mohon untuk ditindaklanjuti sesuai prosedur yang berlaku.</p>
 
 <p>Hormat kami,<br>
-Sistem Informasi Desa</p>
+Admin UT</p>
