@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 
 use App\Http\Livewire\TentangKami;
 use App\Livewire\Auth\ForgotPassword;
+use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Mahasiswalogin;
 use App\Livewire\Auth\Mahasiswaregister;
 use App\Livewire\Auth\ResetPassword;
@@ -21,6 +22,7 @@ use Illuminate\Support\Facades\Auth;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/admin/login', Login::class)->name('filament.admin.auth.login');
 Route::get('/mahasiswaregister', Mahasiswaregister::class)->name('mahasiswaregister');
 Route::get('/mahasiswalogin', Mahasiswalogin::class)->name('mahasiswalogin');
 Route::get('/forgotpassword', ForgotPassword::class)->name('forgotpassword');
