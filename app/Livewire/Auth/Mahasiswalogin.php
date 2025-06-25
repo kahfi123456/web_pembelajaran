@@ -8,6 +8,7 @@ use Livewire\Component;
 class Mahasiswalogin extends Component
 {
     public $email, $password;
+    // test
 
     protected $rules = [
         'email' => 'required|email',

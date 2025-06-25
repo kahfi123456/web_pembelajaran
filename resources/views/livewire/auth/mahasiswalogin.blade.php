@@ -12,7 +12,7 @@
         @endfor
     </div>
 
-    {{-- Loading saat login --}}
+    {{-- Loading saat login test --}}
     <div wire:loading wire:target="login" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
         <div class="flex flex-col items-center h-full justify-center">
             <div class="flex space-x-2">

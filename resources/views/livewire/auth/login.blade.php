@@ -68,7 +68,7 @@
         </div>
 
         <div class="flex-1 hidden lg:flex items-center justify-center relative overflow-hidden bg-gradient-to-tr from-blue-700 to-blue-900">
-            <!-- Blob animation -->
+            <!-- test -->
             <div class="absolute w-[600px] h-[600px] bg-blue-300 opacity-30 rounded-full mix-blend-lighten animate-blob animation-delay-2000"></div>
             <div class="absolute w-[500px] h-[500px] bg-blue-400 opacity-20 rounded-full mix-blend-lighten animate-blob"></div>
             <div class="absolute w-[400px] h-[400px] bg-blue-500 opacity-25 rounded-full mix-blend-lighten animate-blob animation-delay-4000"></div>

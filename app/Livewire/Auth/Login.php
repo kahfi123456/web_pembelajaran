@@ -15,7 +15,7 @@ class Login extends Component
         'email' => 'required|email',
         'password' => 'required',
     ];
-
+    // test
     public function login()
     {
         $this->validate();
